@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  background: url(bg.gif);
+  font-family: Helvetica;
+  text-align: center;
+}
+
+h1, h2{
+  text-align: center;
+  
+}
+
+h1 {
+  font-size: 3em;
+  color: pink;
+  background-color: green;
+}
+
+h2 {
+  font-size: 2em;
+  color: white;
+}
+
+.blinka {
+  -webkit-animation: blinka 1s ease infinite alternate both;
+}
+
+@-webkit-keyframes blinka {
+  to {
+    visibility: hidden;
+  }
+}
+
+.flits {
+  -webkit-animation: flits 3s ease infinite alternate both;
+}
+
+@-webkit-keyframes flits {
+  to {
+    color: green;
+	background-color: pink;
+  }
+}
+
+.blinkb {
+  -webkit-animation: blinkb 11s ease infinite;
+}
+
+@-webkit-keyframes blinkb {
+  to {
+    visibility: hidden;
+  }
+}
+
+.blinkfast {
+  -webkit-animation: blinkfast 20s ease infinite;
+}
+
+@-webkit-keyframes blinkfast {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blinkbullet {
+  to {
+    color: #fff;
+  }
+  from {
+    color: red;
+  }
+}
+
+p {
+  font-size: 3em;
+  color: #eee;
+}
+
+.zwaailicht {
+  -webkit-animation: zwaailichtani 4s ease infinite alternate both;
+}
+
+@-webkit-keyframes zwaailichtani {
+  to {
+    color: red;
+  }
+  from {
+    color: #fff;
+  }
+}
+
+.zwaailicht:before {
+	content: url('http://www.animatieplaatjes.nl/plaatjesZ/zwaailichten10.gif');
+}
+
+.zwaailicht:after {
+	content: url('http://www.animatieplaatjes.nl/plaatjesZ/zwaailichten10.gif');
+}
+
+.bullet {
+	font-size: 3em; 
+	color: red; 
+	position: absolute; 
+	-webkit-animation: blinkbullet 0.1s ease infinite alternate both;
+}
+
+.cruijff {
+  background: url(cruijff.png) 0 0/498px 373px;
+  display: block;
+  position: relative;
+  margin: auto;
+}
+
+#snorrie {
+  -webkit-animation: snor 2s ease infinite alternate;
+  -webkit-animation-fill-mode: both;
+  opacity: 0;
+  -webkit-transition: opacity 3s linear;
+}
+
+@-webkit-keyframes snor {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+</style>
+
+
+<h1 class="blinkz flits">Practicum Functioneel Programmeren</h1>
+
+<marquee>
+<h2 class="blinkz">13:30-17:30</h2>
+</marquee>
+
+<section>
+  <div src="cruijff.png" style="width: 498px; height: 373px;" class="cruijff">
+    <img src="cruijff_snor.png" id="snorrie" style="width: 498px; height: 373px;">
+	<div class="bullet" style="left: 175px; top: 100px">&bullet;</div>
+	<div class="bullet" style="left: 246px; top: 83px">&bullet;</div>
+  </div>
+  
+  <p class="blinkfast zwaailicht">ACHTUNG</p>
+
+</section>
+
+
+</html>
